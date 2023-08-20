@@ -1,4 +1,4 @@
-function getInputFieldValueById(inputFieldId){
+function getInputValueById(inputFieldId){
     const inputField = document.getElementById(inputFieldId);
     const inputFieldValueString = inputField.innerText;
     const inputFieldValue = parseFloat(inputFieldValueString);

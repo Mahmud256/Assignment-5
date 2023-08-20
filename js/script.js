@@ -1,5 +1,5 @@
 document.getElementById('card-one').addEventListener('click', function () {
-    const newPayAmount = getInputFieldValueById('one-tk');
+    const newPayAmount = getInputValueById('one-tk');
 
     const previousPayTotal = getTextElementValueById('total');
     const newPayTotal = previousPayTotal + newPayAmount;
@@ -9,7 +9,7 @@ document.getElementById('card-one').addEventListener('click', function () {
 })
 
 document.getElementById('card-two').addEventListener('click', function () {
-    const newPayAmount = getInputFieldValueById('two-tk');
+    const newPayAmount = getInputValueById('two-tk');
 
     const previousPayTotal = getTextElementValueById('total');
     const newPayTotal = previousPayTotal + newPayAmount;
@@ -19,7 +19,7 @@ document.getElementById('card-two').addEventListener('click', function () {
 })
 
 document.getElementById('card-three').addEventListener('click', function () {
-    const newPayAmount = getInputFieldValueById('three-tk');
+    const newPayAmount = getInputValueById('three-tk');
 
     const previousPayTotal = getTextElementValueById('total');
     const newPayTotal = previousPayTotal + newPayAmount;
@@ -29,7 +29,7 @@ document.getElementById('card-three').addEventListener('click', function () {
 })
 
 document.getElementById('card-four').addEventListener('click', function () {
-    const newPayAmount = getInputFieldValueById('four-tk');
+    const newPayAmount = getInputValueById('four-tk');
 
     const previousPayTotal = getTextElementValueById('total');
     const newPayTotal = previousPayTotal + newPayAmount;
@@ -39,7 +39,7 @@ document.getElementById('card-four').addEventListener('click', function () {
 })
 
 document.getElementById('card-five').addEventListener('click', function () {
-    const newPayAmount = getInputFieldValueById('five-tk');
+    const newPayAmount = getInputValueById('five-tk');
 
     const previousPayTotal = getTextElementValueById('total');
     const newPayTotal = previousPayTotal + newPayAmount;
@@ -49,7 +49,7 @@ document.getElementById('card-five').addEventListener('click', function () {
 })
 
 document.getElementById('card-six').addEventListener('click', function () {
-    const newPayAmount = getInputFieldValueById('six-tk');
+    const newPayAmount = getInputValueById('six-tk');
 
     const previousPayTotal = getTextElementValueById('total');
     const newPayTotal = previousPayTotal + newPayAmount;
@@ -59,7 +59,7 @@ document.getElementById('card-six').addEventListener('click', function () {
 })
 
 document.getElementById('card-seven').addEventListener('click', function () {
-    const newPayAmount = getInputFieldValueById('seven-tk');
+    const newPayAmount = getInputValueById('seven-tk');
 
     const previousPayTotal = getTextElementValueById('total');
     const newPayTotal = previousPayTotal + newPayAmount;
@@ -69,7 +69,7 @@ document.getElementById('card-seven').addEventListener('click', function () {
 })
 
 document.getElementById('card-eight').addEventListener('click', function () {
-    const newPayAmount = getInputFieldValueById('eight-tk');
+    const newPayAmount = getInputValueById('eight-tk');
 
     const previousPayTotal = getTextElementValueById('total');
     const newPayTotal = previousPayTotal + newPayAmount;
@@ -79,7 +79,7 @@ document.getElementById('card-eight').addEventListener('click', function () {
 })
 
 document.getElementById('card-nine').addEventListener('click', function () {
-    const newPayAmount = getInputFieldValueById('nine-tk');
+    const newPayAmount = getInputValueById('nine-tk');
 
     const previousPayTotal = getTextElementValueById('total');
     const newPayTotal = previousPayTotal + newPayAmount;
