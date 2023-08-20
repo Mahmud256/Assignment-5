@@ -17,3 +17,16 @@ function setTextElementValueById(elementId, newValue){
     const textElement = document.getElementById(elementId);
     textElement.innerText = newValue;
 }
+
+function addToCalculationEntry(product, price){
+    console.log(product+ ' '  + price)
+    const calculationEntry = document.getElementById('calculation-entry');
+
+    const count = calculationEntry.childElementCount;
+
+    const p = document.createElement('p');
+    p.classList.add('my-4');
+    p.innerHTML = `${count + 1}. ${product}`;
+
+    calculationEntry.appendChild(p);
+}
