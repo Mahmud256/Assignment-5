@@ -43,7 +43,7 @@
                         <h1 class="text-[2.5rem] font-semibold my-5 text-center md:text-start">Kitchenware</h1>
                         <div class="grid sm:grid-cols-1 justify-center md:justify-start lg:flex lg:flex-row gap-5">
 
-                            <div id="card-one" class="card w-64 bg-base-100">
+                            <div onclick="cardList(this)" id="card-one" class="card w-64 bg-base-100">
                                 <figure class="pt-4">
                                     <div class="bg-[#F8F8F8] w-[85%] rounded-lg">
                                         <img src="/images/prod1.png" alt="Shoes" class="rounded-xl m-auto p-5">
@@ -64,7 +64,7 @@
                                 </div>
                             </div>
 
-                            <div id="card-two" class="card w-64 bg-base-100">
+                            <div onclick="cardList(this)" id="card-two" class="card w-64 bg-base-100">
                                 <figure class="pt-4">
                                     <div class="bg-[#F8F8F8] w-[85%] rounded-lg">
                                         <img src="/images/prod2.png" alt="Shoes" class="rounded-xl m-auto p-5">
@@ -85,7 +85,7 @@
                                 </div>
                             </div>
 
-                            <div id="card-three" class="card w-64 bg-base-100">
+                            <div onclick="cardList(this)" id="card-three" class="card w-64 bg-base-100">
                                 <figure class="pt-4">
                                     <div class="bg-[#F8F8F8] w-[85%] rounded-lg">
                                         <img src="/images/prod3.png" alt="Shoes" class="rounded-xl m-auto p-5">
@@ -112,7 +112,7 @@
                         <h1 class="text-[2.5rem] font-semibold my-5 text-center md:text-start">Sportswear</h1>
                         <div class="grid sm:grid-cols-1 justify-center md:justify-start lg:flex lg:flex-row gap-5">
 
-                            <div id="card-four" class="card w-64 bg-base-100">
+                            <div onclick="cardList(this)" id="card-four" class="card w-64 bg-base-100">
                                 <figure class="pt-4">
                                     <div class="bg-[#F8F8F8] w-[85%] rounded-lg">
                                         <img src="/images/prod4.png" alt="Shoes" class="rounded-xl m-auto p-5">
@@ -133,7 +133,7 @@
                                 </div>
                             </div>
 
-                            <div id="card-five" class="card w-64 bg-base-100">
+                            <div onclick="cardList(this)" id="card-five" class="card w-64 bg-base-100">
                                 <figure class="pt-4">
                                     <div class="bg-[#F8F8F8] w-[85%] rounded-lg">
                                         <img src="/images/prod5.png" alt="Shoes" class="rounded-xl m-auto p-5">
@@ -154,7 +154,7 @@
                                 </div>
                             </div>
 
-                            <div id="card-six" class="card w-64 bg-base-100">
+                            <div onclick="cardList(this)" id="card-six" class="card w-64 bg-base-100">
                                 <figure class="pt-4">
                                     <div class="bg-[#F8F8F8] w-[85%] rounded-lg">
                                         <img src="/images/prod6.png" alt="Shoes" class="rounded-xl m-auto p-5">
@@ -181,7 +181,7 @@
                         <h1 class="text-[2.5rem] font-semibold my-5 text-center md:text-start">Furniture</h1>
                         <div class="grid sm:grid-cols-1 justify-center md:justify-start lg:flex lg:flex-row gap-5">
 
-                            <div id="card-seven" class="card w-64 bg-base-100">
+                            <div onclick="cardList(this)" id="card-seven" class="card w-64 bg-base-100">
                                 <figure class="pt-4">
                                     <div class="bg-[#F8F8F8] w-[85%] rounded-lg">
                                         <img src="/images/prod7.png" alt="Shoes" class="rounded-xl m-auto p-5">
@@ -202,7 +202,7 @@
                                 </div>
                             </div>
 
-                            <div id="card-eight" class="card w-64 bg-base-100">
+                            <div onclick="cardList(this)" id="card-eight" class="card w-64 bg-base-100">
                                 <figure class="pt-4">
                                     <div class="bg-[#F8F8F8] w-[85%] rounded-lg">
                                         <img src="/images/prod8.png" alt="Shoes" class="rounded-xl m-auto p-5">
@@ -223,7 +223,7 @@
                                 </div>
                             </div>
 
-                            <div id="card-nine" class="card w-64 bg-base-100">
+                            <div onclick="cardList(this)" id="card-nine" class="card w-64 bg-base-100">
                                 <figure class="pt-4">
                                     <div class="bg-[#F8F8F8] w-[85%] rounded-lg">
                                         <img src="/images/prod9.png" alt="Shoes" class="rounded-xl m-auto p-5">
@@ -253,12 +253,11 @@
                             <div class="card w-64 md:w-80 bg-base-100">
                                 <div class="card-body">
                                     <h2 class="card-title">Have coupon?</h2>
-                                    <div class="coupon">
+                                    <div class="coupon-code">
                                         <input type="text"
-                                            class="border bg-[#fff] text-lg md:text-xl w-32 md:w-40 p-[0.313rem] rounded-l-lg outline-0"
-                                            placeholder="Coupon code" name="" id="rectangle-width">
-                                        <button
-                                            class="py-2 px-5 bg-[#E527B2] text-[#fff] rounded-r-lg absolute">Apply</button>
+                                            class="border bg-[#fff] text-lg md:text-xl w-32 md:w-40 p-[0.563rem] rounded-l-lg outline-0"
+                                            placeholder="Coupon code" name="" id="coupon">
+                                        <button id="apply" class="py-2 px-5 btn btn-secondary text-[#fff] rounded-l-none absolute"disabled>Apply</button>
 
                                     </div>
 
@@ -273,14 +272,25 @@
                                     <hr>
                                     <div class="cart-box">
                                         <h6>Total price: <span id="total-price">00</span>TK</h6>
-                                        <h6>Discount: <span>00</span>TK</h6>
-                                        <h5>Total: <span>00</span>TK</h5>
+                                        <h6>Discount: <span id="discount">00</span>TK</h6>
+                                        <h5>Total: <span id="discount-price">00</span>TK</h5>
                                         <hr>
                                     </div>
                                 </div>
-                                <button
-                                    class="w-52 md:w-[16.875rem] top-5 m-auto py-2 px-5 bg-[#E527B2] text-[#fff] rounded-lg relative">Make
+                                <!-- Open the modal using ID.showModal() method -->
+                                <button id="purchase" class="w-52 md:w-[16.875rem] top-5 m-auto py-2 btn btn-secondary text-[#fff] rounded-lg relative" onclick="my_modal_1.showModal()"disabled>Make
                                     Purchase</button>
+                                <dialog id="my_modal_1" class="modal">
+                                    <form method="dialog" class="modal-box lg:w-2/6 flex flex-col items-center">                                       
+                                            <img src="./images/congo.png" alt="" srcset="">
+                                            <h1 class="text-4xl font-extrabold">Congratulations</h1>
+                                            <p class="text-sm font-medium text-center">Your Purchase the product</p>
+                                        <div class="modal-action">
+                                            <!-- if there is a button in form, it will close the modal -->
+                                            <button id="reload" class="btn hover:bg-[#E527B2] bg-[#E527B2] text-[#fff]">Home Page</button>
+                                        </div>
+                                    </form>
+                                </dialog>
                             </div>
                         </div>
                     </div>

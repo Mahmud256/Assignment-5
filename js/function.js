@@ -1,16 +1,15 @@
-function getInputValueById(inputFieldId){
+function getInputFieldValueById(inputFieldId) {
     const inputField = document.getElementById(inputFieldId);
-    const inputFieldValueString = inputField.innerText;
+    const inputFieldValueString = inputField.value;
     const inputFieldValue = parseFloat(inputFieldValueString);
     inputField.value = '';
     return inputFieldValue;
 }
 
-function getTextElementValueById(elementId){
-    const textElement = document.getElementById(elementId);
-    const textElementValueString = textElement.innerText;
-    const textElementValue = parseFloat(textElementValueString);
-    return textElementValue;
+function getInputFieldValueById(inputFieldId){
+    const inputField = document.getElementById(inputFieldId);
+    const inputFieldValue = inputField.value;
+    return inputFieldValue;
 }
 
 function setTextElementValueById(elementId, newValue){
@@ -18,8 +17,8 @@ function setTextElementValueById(elementId, newValue){
     textElement.innerText = newValue;
 }
 
-function addToCalculationEntry(product, price){
-    console.log(product+ ' '  + price)
+function addToCalculationEntry(product) {
+    console.log(product)
     const calculationEntry = document.getElementById('calculation-entry');
 
     const count = calculationEntry.childElementCount;

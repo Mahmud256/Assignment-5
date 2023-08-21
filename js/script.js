@@ -1,97 +1,43 @@
-document.getElementById('card-one').addEventListener('click', function () {
-    const newPayAmount = getInputValueById('one-tk');
+let total =0;
+function cardList(target){
+    const selectedItemContainer = document.getElementById("calculation-entry");
+    const itemName = target.childNodes[3].childNodes[3].innerText;
+    addToCalculationEntry(itemName);
 
-    const previousPayTotal = getTextElementValueById('total-price');
-    const newPayTotal = previousPayTotal + newPayAmount;
-    setTextElementValueById('total-price', newPayTotal);
-    console.log(newPayTotal);
-    addToCalculationEntry('K. Accessories', newPayTotal);
+    const price = target.childNodes[3].childNodes[5].innerText.split(" ")[0];
+    total = parseFloat(total) + parseFloat(price);
+    totalPrice = total.toFixed(2);
+    document.getElementById("total-price").innerText = totalPrice; 
+    document.getElementById("discount-price").innerText = totalPrice; 
+    const purchasebtn = document.getElementById("purchase"); 
+    const applybtn = document.getElementById("apply"); 
+
+    if(totalPrice >= 200){
+        applybtn.disabled = false;
+    }
+    else{
+        applybtn.disabled = true;
+    }
     
-})
+    if(totalPrice === 0){
+        purchasebtn.disabled = true;
+    }
+    else{
+        purchasebtn.disabled = false;
+    }
 
-document.getElementById('card-two').addEventListener('click', function () {
-    const newPayAmount = getInputValueById('two-tk');
 
-    const previousPayTotal = getTextElementValueById('total-price');
-    const newPayTotal = previousPayTotal + newPayAmount;
-    setTextElementValueById('total-price', newPayTotal);
-    console.log(newPayTotal);
-    addToCalculationEntry('K. Accessories', newPayTotal);
-    
-})
+    document.getElementById('apply').addEventListener('click', function (){
+        const couponCode = getInputFieldValueById('coupon');
+        if (couponCode === 'SELL200') {
+            const discountPrice = (20/100)*totalPrice;
+            const discountTotal = totalPrice - discountPrice;
+            setTextElementValueById('discount', discountPrice.toFixed(2));
+            setTextElementValueById('discount-price', discountTotal.toFixed(2));
+        }
+    })
+}
 
-document.getElementById('card-three').addEventListener('click', function () {
-    const newPayAmount = getInputValueById('three-tk');
-
-    const previousPayTotal = getTextElementValueById('total-price');
-    const newPayTotal = previousPayTotal + newPayAmount;
-    setTextElementValueById('total-price', newPayTotal);
-    console.log(newPayTotal);
-    addToCalculationEntry('Home Cooker', newPayTotal);
-    
-})
-
-document.getElementById('card-four').addEventListener('click', function () {
-    const newPayAmount = getInputValueById('four-tk');
-
-    const previousPayTotal = getTextElementValueById('total-price');
-    const newPayTotal = previousPayTotal + newPayAmount;
-    setTextElementValueById('total-price', newPayTotal);
-    console.log(newPayTotal);
-    addToCalculationEntry('Sports Back Cap', newPayTotal);
-  
-})
-
-document.getElementById('card-five').addEventListener('click', function () {
-    const newPayAmount = getInputValueById('five-tk');
-
-    const previousPayTotal = getTextElementValueById('total-price');
-    const newPayTotal = previousPayTotal + newPayAmount;
-    setTextElementValueById('total-price', newPayTotal);
-    console.log(newPayTotal);
-    addToCalculationEntry('Full Jersey Set', newPayTotal);
-    
-})
-
-document.getElementById('card-six').addEventListener('click', function () {
-    const newPayAmount = getInputValueById('six-tk');
-
-    const previousPayTotal = getTextElementValueById('total-price');
-    const newPayTotal = previousPayTotal + newPayAmount;
-    setTextElementValueById('total-price', newPayTotal);
-    console.log(newPayTotal);
-    addToCalculationEntry('Sports cates', newPayTotal);
-    
-})
-
-document.getElementById('card-seven').addEventListener('click', function () {
-    const newPayAmount = getInputValueById('seven-tk');
-
-    const previousPayTotal = getTextElementValueById('total-price');
-    const newPayTotal = previousPayTotal + newPayAmount;
-    setTextElementValueById('total-price', newPayTotal);
-    console.log(newPayTotal);
-    addToCalculationEntry('Single Relax Chair', newPayTotal);
-   
-})
-
-document.getElementById('card-eight').addEventListener('click', function () {
-    const newPayAmount = getInputValueById('eight-tk');
-
-    const previousPayTotal = getTextElementValueById('total-price');
-    const newPayTotal = previousPayTotal + newPayAmount;
-    setTextElementValueById('total-price', newPayTotal);
-    console.log(newPayTotal);
-    addToCalculationEntry('Children play', newPayTotal);
-    
-})
-
-document.getElementById('card-nine').addEventListener('click', function () {
-    const newPayAmount = getInputValueById('nine-tk');
-
-    const previousPayTotal = getTextElementValueById('total-price');
-    const newPayTotal = previousPayTotal + newPayAmount;
-    setTextElementValueById('total-price', newPayTotal);
-    console.log(newPayTotal);
-    addToCalculationEntry('Flexible Sofa', newPayTotal);
+document.getElementById('reload').addEventListener('click', function () {
+    window.location.reload();
 })
